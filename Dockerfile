@@ -2,8 +2,8 @@ FROM ubuntu:18.04
 
 # Install cron
 RUN apt-get update -y
-#RUN apt-get full-upgrade -y
-RUN apt-get install -y cron git nano php7.2 php7.2-xml
+#RUN apt-get full-upgrade -y  --no-install-recommends
+RUN apt-get install -y  --no-install-recommends cron git nano php7.2 php7.2-xml
 
 # Add crontab file in the cron directory
 ADD crontab /etc/cron.d/simple-cron
